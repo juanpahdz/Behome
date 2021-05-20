@@ -1,0 +1,192 @@
+{% extends 'structure.html'%}
+{% block metadata %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/views/main/homepage.css')}}">
+<title>beHome | El mejor lugar para encontrar tu futuro</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="home_baner">
+    <img src="{{url_for('static', filename='img/Homapage_baner.jpg')}}" alt="">
+</div>
+<div class="find_your_home">
+    <form action="" class="find_bar">
+        <div class="find_box where">
+            <div class="icon">
+                <img src="{{url_for('static', filename='img/search_icon_black.svg')}}" alt="">
+            </div>
+            <input type="text" placeholder="¿A donde te mudarás?">
+        </div>
+
+        <div class="find_box type">
+            <div class="icon">
+                <img src="{{url_for('static', filename='img/home_icon_black.svg')}}" alt="">
+            </div>
+            <input type="text" placeholder="¿Tipo de Casa?">
+        </div>
+
+        <div class="find_box how_many">
+            <div class="icon">
+                <img src="{{url_for('static', filename='img/person_icon_black.svg')}}" alt="">
+            </div>
+            <input type="text" placeholder="¿Para Cuantos?">
+        </div>
+
+        <button type="submit" class="find_btn"><img src="{{url_for('static', filename='img/search_icon.svg')}}"
+                alt=""></button>
+    </form>
+
+    <div class="top_related">
+        <div class="section_title">
+            <div class="title">
+                <h2>Actualmente mas de 10 Propiedades disponibles cerca de ti</h2>
+            </div>
+            <div class="rigth">
+                <button class="btn btn_primary">Ver Más</button>
+            </div>
+        </div>
+        <div class="related_carousel">
+            <div class="home_box primary">
+                <div class="hero">
+                    <div class="location">La paz, Envigado</div>
+                    <div class="title">Aparta Estudio Lujoso<span class="op_price sell">$450 / mes</span></div>
+                </div>
+                <div class="overlay">
+                    74m2 - 2 baños - 4 piezas
+                </div>
+                <img class="home_img" src="{{url_for('static', filename='img/home1.jpg')}}" alt="">
+            </div>
+            <div class="home_box primary">
+                <div class="hero">
+                    <div class="location">La Cuenca, Envigado</div>
+                    <div class="title">Casa Campestre<span class="op_price apartment">$540M</span></div>
+                </div>
+                <div class="overlay">
+                    60m2 - 1 baño - 4 piezas
+                </div>
+                <img class="home_img" src="{{url_for('static', filename='img/home2.jpg')}}" alt="">
+            </div>
+            <div class="home_box primary">
+                <div class="hero">
+                    <div class="location">Señorial, Envigado</div>
+                    <div class="title">Aparta Estudio<span class="op_price sell">$1.450M / mes</span></div>
+                </div>
+                <div class="overlay">
+                    32m2 - 1 baño - 2 piezas
+                </div>
+                <img class="home_img" src="{{url_for('static', filename='img/home4.jpg')}}" alt="">
+            </div>
+            <div class="home_box primary">
+                <div class="hero">
+                    <div class="location">Camino Verde, Envigado</div>
+                    <div class="title">Casa de dos Pisos<span class="op_price apartment"> $700M</span></div>
+                </div>
+                <div class="overlay">
+                    90m2 - 4 baño - 6 piezas
+                </div>
+                <img class="home_img" src="{{url_for('static', filename='img/home3.jpg')}}" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="close_to_me">
+        <div class="section_title">
+            <div class="title">
+                <h2>Destinos cerca de ti</h2>
+            </div>
+        </div>
+        <div class="tags_deck">
+            <a href="#">
+                <div class="place_tag" id="Medellin">Medellin</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="Envigado">Envigado</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="La Estrella">La Estrella</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="Itagui">Itagui</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="Carmen">Carmen</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="Caldas">Caldas</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="Jardin">Jardin</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="La Ceja">La Ceja</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="El Poblado">El Poblado</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="El Retiro">El Retiro</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="Santafe">Santafe</div>
+            </a>
+            <a href="#">
+                <div class="place_tag" id="San Jeronimo">San Jeronimo</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="baner_Section">
+        <div class="text_overlay">
+            <div class="text_content">
+                <h2>¿Buscando donde Vender o Arrendar?</h2>
+                <span>Behome cuenta con más de +1200 Usuarios diariamente buscando una vivienda como la que tienes para
+                    ofrecer. No pierdas la oportunidad</span>
+                <a href="#" class="btn btn_white">¿Listo para vender?</a>
+            </div>
+        </div>
+        <img src="{{url_for('static', filename='img/Homapage_baner_selling.png')}}" alt="">
+    </div>
+
+    <div class="what_they_say">
+        <div class="section_title">
+            <div class="title">
+                <h2>¿Que dicen de beHome?</h2>
+            </div>
+        </div>
+
+        <div class="section_content">
+            <div class="review">
+                <div class="starts_review">
+                    <img src="{{url_for('static', filename='img/Review_starts.svg')}}" alt="">
+                </div>
+                <div class="testimony">
+                    “Un servicio increible, los chicos de beHome nos acompañaron en todo el proceso de la venta, se hizo
+                    todo de forma legal y correctamente. Muy agradecida con beHome.com”
+                </div>
+                <div class="author">
+                    <div class="name">Andrea Sarmiento</div>
+                    <div class="desc">Vendió una apartamento a travez de <span class="underline">beHome.com</span></div>
+                </div>
+            </div>
+            <div class="images">
+                <div class="box_img">
+                    <div class="overlay"></div>
+                    <img src="{{url_for('static', filename='img/Box_testimony_profile.jpg')}}" alt="">
+                </div>
+                <div class="box_height">
+                    <div class="box_img">
+                        <div class="overlay"></div>
+                        <img src="{{url_for('static', filename='img/Box_testimony_house.jpg')}}" alt="">
+                    </div>
+                    <div class="box_img">
+                        <div class="overlay"></div>
+                        <img src="{{url_for('static', filename='img/Box_testimony_inside.jpg')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

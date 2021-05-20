@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/views/main/main.css')}}">
+
+    {% block metadata %}
+    {% endblock %}
+
+
+    <script src="https://use.fontawesome.com/729e93407f.js"></script>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="header">
+            <div class="logo">
+                <span>bH</span>
+            </div>
+            <nav class="menu_bar">
+                <a href="#" class="active">
+                    <li class="item">Encuentra tu próxima vivienda</li>
+                </a>
+                <a href="#">
+                    <li class="item">Nuevas Ofertas</li>
+                </a>
+                <a href="#">
+                    <li class="item">Conoce beHome</li>
+                </a>
+            </nav>
+            <div class="margin_left">
+                <div class="call_button">
+                    <div class="interaction">
+                    {% if 'logged_in' in session %}
+                        <div id="openDropdown" onclick="openDropdown()" class="profile_info auth_item">
+                            <li class="profile_name" >¡Hola {{ session['user']['name'] }}!</li>
+                            <li class="profile_pic">
+                                <img src="{{url_for('static', filename='img/avatar.jpg')}}" alt="">
+                            </li>
+                            
+                            <div id="profile_drop" class="profile_dropdown">
+                                    {% if session['rol'] == "invitado" %}
+                                        <a href="/mis-anuncios"><li class="primary_item">Ingresar como anfitrion</li></a>
+                                    {% elif session['rol'] == "anfitrion" %}
+                                        <a href="/"><li class="primary_item">Ingresar como Invitado</li></a>
+                                    {% endif %}
+                                <a href="#"><li class="primary_item notf">Notificaciones</li></a>
+                                <a href="#"><li class="primary_item">Mis Viajes</li></a>
+                                <a href="#"><li class="primary_item">Mi Perfil</li></a>
+                                <a href="/user/signout"><li class="secundary_item">Cerrar Sesion</li></a>
+                            </div>
+                        </div>
+                        
+                    {% else %}
+                        <a href="/register"><li class="auth_item">Registrate</li></a>
+                        <a href="/login"><li class="auth_item" >Ingresar</li></a>
+                    {% endif %}
+                        </div>
+                    <div class="search_bar">
+                        <a href="#">
+                            <img src="{{url_for('static', filename='img/search_icon.svg')}}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="global_content">
+            {% block content %}
+            {% endblock %}
+
+            <footer>
+                <div class="content">
+                    <div class="footer_logo column">
+                        <span class="logotipo">beHome</span>
+                        <button class="btn btn_white">
+                            ¿Listo para empezar?
+                        </button>
+                    </div>
+                    <div class="menu_1 column">
+                        <div class="menu_title">
+                            Navega por el sitio
+                        </div>
+                        <nav>
+                            <a href="#">
+                                <li>Nuevas Ofertas</li>
+                            </a>
+                            <a href="#">
+                                <li>Conoce sobre beHome</li>
+                            </a>
+                            <a href="#">
+                                <li>Ingresar</li>
+                            </a>
+                            <a href="#">
+                                <li>Registrate</li>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="menu_2 column">
+                        <div class="box_img">
+                            <div class="overlay">beHome</div>
+                            <img src="{{url_for('static', filename='img/Box_testimony_inside.jpg')}}" alt="">
+                        </div>
+                        <div class="Business_info">
+                            <div class="menu_title">¿Quieres contactarnos?</div>
+                            <div class="phone">
+                                <a href="#">Medellin</a> -
+                                <a href="#">bucaramanga</a> -
+                                <a href="#">cali</a> -
+                                <a href="#">bogota</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+</body>
+
+</html>

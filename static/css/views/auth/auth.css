@@ -1,0 +1,169 @@
+body.auth{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.auth_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 40px);
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.auth_content .baner{
+    width: 25%;
+    position: relative;
+    height: calc(100vh - 40px);
+    overflow: hidden;
+    border-radius: 60px;
+}
+
+.auth_content .baner .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.auth_content .baner .overlay .logo{
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: -3px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.auth_content .baner .overlay .logo::after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 40%;
+    bottom: 0;
+    left: 30%;
+    background-color: var(--primary-color);
+}
+
+.auth_content .baner .overlay .subtitle{
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 25px;
+}
+
+
+.auth_content .baner .overlay .atributte{
+    font-family: var(--primary-font);
+    color: rgba(255, 255, 255, 0.404);
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
+
+
+.auth_content .baner img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.auth_content .auth_form{
+    width: 80%;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth_content .auth_form .auth_form_content{
+    width: 40%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth_content .auth_form .auth_form_content h1{
+    font-size: 30px;
+    color: var(--black-color);
+    font-weight: 400;
+    font-family: var(--secundary-font);
+    line-height: 60px;
+    margin-bottom: 0;
+}
+
+.auth_content .auth_form .auth_form_content h1 .logo{
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    margin-left: -2px;
+}
+
+.auth_content .auth_form .auth_form_content .message{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--secundary-font);
+}
+
+.auth_content .auth_form form{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.auth_content .auth_form label{
+    font-size: 18px;
+    color: var(--black-color);
+    font-family: var(--secundary-font);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.auth_content .auth_form input, select{
+    font-family: var(--secundary-font);
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid transparent;
+    background-color: #FED5D5;
+    border-radius: 6px;
+    transition: 0.3s;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #3d3d3d;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+
+.auth_content .auth_form input:focus{
+    border: 1px solid #FF585D;
+    background-color: #FFFBFB;
+}
+
+.auth_content .auth_form button[type="submit"]{
+    margin-top: 20px;
+}
+
+.error--hiden{
+    display: none;
+}

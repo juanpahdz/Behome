@@ -1,0 +1,58 @@
+{% extends 'profileLayout.html'%}
+{% block content %}
+    <div class="floating_message primary">
+        <span>Te encuentras en nuestro administrador de anuncios, aqui podras agregar nuevos anuncios o editar los previamente creados</span>
+        <span id="close_floatmess" class="close">x</span>
+    </div>
+
+    <div class="page_title">
+        Mis Anuncios
+    </div>
+    <div class="search_bar ad">
+        <input type="text" placeholder="Búsqueda...">
+        <button type="submit" class="send_search">
+            <img src="{{url_for('static', filename='img/search_icon.svg')}}" alt="">
+        </button>
+    </div>
+    <div class="divider"></div>
+    <div class="anucements_deck">
+        <div class="anucement_box">
+            <div class="image">
+                <img src="{{url_for('static', filename='img/anuncement_img1.jpg')}}" alt="">
+            </div>
+            <div class="main_info">
+                <div class="title">
+                    Aparta estudio de lujo
+                </div>
+                <div class="location">
+                    <img src="{{url_for('static', filename='img/anuncement_location.svg')}}" alt="">
+                    Envigado, Antioquia
+                </div>
+                <div class="price">
+                    $150.000 <span>/ noche</span>
+                </div>
+                <div class="extra_info">
+                    <li>
+                        <img src="{{url_for('static', filename='img/anuncement_meters.svg')}}" alt="">
+                        contiene 320 metros
+                    </li>
+                    <li>
+                        <img src="{{url_for('static', filename='img/anuncement_rooms.svg')}}" alt="">
+                        2 baños, 5 habitaciones
+                    </li>
+                    <li>
+                        <img src="{{url_for('static', filename='img/anuncement_persons.svg')}}" alt="">
+                        3 - 5 personas
+                    </li>
+                </div>
+                <div class="edit">
+                    <button style="margin-left: -4px;color: #7b7b7b;" class="btn_underline">
+                        editar este post
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

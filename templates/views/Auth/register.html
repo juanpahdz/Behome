@@ -1,0 +1,41 @@
+{% extends 'authlayout.html'%}
+{% block metadata %}
+<title>Register | beHome</title>
+{% endblock %}
+{% block content %}
+    <div class="login_form auth_form_content">
+        <h1> Bienvenido a <br> <span class="logo">beHome</span></h1>
+        <div class="message">Ya tienes cuenta en beHome? <a href="/login" class="btn_underline"> Ingresa aqui</a></div>
+        
+        <form name="signup_form" method="POST">
+            <label for="">Nombre Completo</label>
+            <input name="name" type="text" required>
+            
+            <label for="">Correo electronico</label>
+            <input name="email" type="email" required>
+
+            <div class="input_control">
+                <div class="input1">
+                    <label for="">Pais de residencia</label>
+                    <input name="country" type="text" placeholder="" required>
+                </div>
+
+                <div class="input2">
+                    <label for="">Ciudad de residencia</label>
+                    <input name="city" type="text" placeholder="" required>
+                </div>
+            </div>
+
+            <label for="">¿Que deseas hacer dentro de la  App?</label>
+            <select name="" id="" >
+                <option disabled selected>Seleccionar una opcion valida</option>
+            </select>
+
+            <label for="">Contraseña</label>
+            <input type="password" name="password" placeholder="" required>
+
+            <p class="error error--hiden"></p>
+            <button type="submit" class="btn btn_primary">Registrame</button>
+        </form>
+    </div>
+{% endblock %}
